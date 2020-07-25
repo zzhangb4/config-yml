@@ -1,9 +1,9 @@
-token: "mUMpbFIV68PvnKZa"    # lichess OAuth2 Token, Blazikenbot2000
+token: "xxxxxxxxxxxxxxxx"    # lichess OAuth2 Token
 url: "https://lichess.org/"  # lichess base URL
 
 engine:                      # engine settings
   dir: "./engines/"          # dir containing engines, relative to this project
-  name: "stockfish_20011801_x64_moderne"        # binary name of the engine to use
+  name: "engine_name"        # binary name of the engine to use
   protocol: "uci"            # "uci" or "xboard"
   uci_ponder: true           # think on opponent time; only works if "protocol" is "uci"
   polyglot:
@@ -27,8 +27,6 @@ engine:                      # engine settings
     Ponder: true
     Threads: 1               # max CPU threads the engine can use
     Hash: 128                # max memory (in megabytes) the engine can allocate
-	
-	Minimum Think Time: 0
 #   go_commands:             # additional options to pass to the UCI go command
 #     nodes: 1               # Search so many nodes only.
 #     depth: 5               # Search depth ply only.
@@ -72,5 +70,5 @@ challenge:                   # incoming challenges
 #   - classical
 #   - correspondence
   modes:                     # game modes to accept
-#   - casual                 # unrated games
+    - casual                 # unrated games
     - rated                  # rated games - must comment if the engine doesn't try to win
